@@ -36,17 +36,9 @@ contacts = [
     }
 ]
 
-def save_to_json_file(data_to_save, file_name = 'contacts.json', writing_mode = 'w'):
+def save_to_json_file(data_to_save, file_name='contacts.json', writing_mode='w'):
     try:
         with open(file_name, writing_mode) as file_writer:
-            # file_writer.write('[\n')
-            # for index, element in enumerate(data_to_save):
-            #     json.dump(element, file_writer)
-            #     if index == len(data_to_save) - 1:
-            #         file_writer.write('\n')
-            #     else:
-            #         file_writer.write(',\n')
-            # file_writer.write(']')
             json.dump(data_to_save, file_writer, indent=4)
         
     except Exception as ex:
@@ -77,12 +69,3 @@ new_contact = {
 contacts.append(new_contact)
 
 save_to_json_file(contacts)
-
-
-'''
-LOW - 2025-10-03 20:46:59 - INFO - Lorem ipsum dolor sit ...
-LOW - 2025-10-03 20:47:29 - INFO - Lorem ipsum dolor sit ...
-LOW - 2025-10-03 20:47:59 - INFO - Lorem ipsum dolor sit ...
-LOW - 2025-10-03 20:48:12 - INFO - Lorem ipsum dolor sit ...
-HIGH - 2025-10-03 20:56:00 - ERROR - Lorem ipsum dolor sit ...
-'''
