@@ -36,12 +36,17 @@ contacts = [
     }
 ]
 
-try:
-    with open('contacts.json', 'w') as file_writer:
-        json.dump(contacts, file_writer, indent=4)
-    
-except Exception as ex:
-    print(f'Dogodila se greska: {ex}')
+def save_to_json_file(data_to_save, file_name = 'contacts.json', writing_mode = 'w'):
+    try:
+        with open(file_name, writing_mode) as file_writer:
+            json.dump(data_to_save, file_writer, indent=4)
+        
+    except Exception as ex:
+        print(f'Dogodila se greska: {ex}')
+
+
+
+save_to_json_file(contacts)
 
 
 new_contact = {
@@ -61,3 +66,6 @@ new_contact = {
         'age': 27
     }
 
+contacts.append(new_contact)
+
+save_to_json_file(contacts)

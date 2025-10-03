@@ -30,5 +30,21 @@
             "country": "Hrvatska"
         },
         "age": 25
+    },
+    {
+        "first_name": "Iva",
+        "last_name": "Ivic",
+        "phone": [
+            "+385 9_ 6548 123",
+            "+385 0_ 6548 123"
+        ],
+        "email": "iva@email.hr",
+        "address": {
+            "street": "Ulica 987",
+            "postal_code": "10290",
+            "city": "Zapresic",
+            "country": "Hrvatska"
+        },
+        "age": 27
     }
 ]
